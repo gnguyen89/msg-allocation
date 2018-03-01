@@ -1,0 +1,33 @@
+.pageHeading {
+  font-size: 2.4rem;
+  line-height: 3.2rem;
+}
+
+.subHeading {
+  font-size: 1.6rem;
+  line-height: 2.4rem;
+}
+
+.modalHeading {
+  font-size: 1.4rem;
+  line-height: 2.2rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.body {
+  font-size: 1.2rem;
+  line-height: 1.8rem;
+  white-space: pre-wrap;
+}
+
+.buttonText {
+  font-size: 1.2rem;
+  line-height: 1.8rem;
+  white-space: nowrap;
+}
+
+.caption {
+  font-size: 1rem;
+  line-height: 1.6rem;
+}

@@ -1,0 +1,29 @@
+.radioInputStyle {
+  margin-bottom: 0.8rem;
+  padding-left: 0.4rem;
+  width: 2.4rem;
+  height: 2.4rem;
+  font-size: 2.4rem;
+  cursor: pointer;
+  display: inline-block;
+}
+
+.radio {
+  margin-right: 1.2rem;
+}
+
+.radio-unchecked {
+  color: #babcc5;
+}
+
+.radio-checked {
+  color: #aa1e23;
+}
+
+.optionImage {
+  max-width: 62rem;
+}
+
+.reactRadio {
+  display: none;
+}

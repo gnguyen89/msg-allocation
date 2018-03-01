@@ -1,0 +1,27 @@
+.primary {
+  color: #232950;
+}
+
+.secondary {
+  color: #4f6987;
+}
+
+.callToAction {
+  color: #aa1e23;
+}
+
+.warning {
+  color: #ff764c;
+}
+
+.success {
+  color: #00a896;
+}
+
+.hint {
+  color: #e3e7ed;
+}
+
+.contrast {
+  color: #ffffff;
+}
