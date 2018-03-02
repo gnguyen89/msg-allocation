@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Redirect } from 'react-router';
+import { Redirect } from 'react-router-dom';
 
 class App extends Component {
   constructor(props) {
@@ -12,7 +12,7 @@ class App extends Component {
   }
 
   changeRoute() {
-    return <Redirect to="/test" />;
+    return <Redirect to="/questions" />;
   }
 
   verify() {

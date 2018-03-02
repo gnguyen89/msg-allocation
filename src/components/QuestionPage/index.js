@@ -1,12 +1,13 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
+import { Redirect } from 'react-router-dom';
 import QuestionCard from '../QuestionCard';
 
 import Questions from '../Questions';
 
 const QUESTIONS = [
-  'Location',
   'Gender',
+  'Location',
+  'Language',
   'Personality',
 ];
 
@@ -27,24 +28,32 @@ class TestPage extends Component {
   nextQuestion() {
     let { currentIndex } = this.state;
     currentIndex++;
-    if (currentIndex >= QUESTIONS.length) currentIndex = 0;
-    this.setState({ currentIndex });
+    if (currentIndex < QUESTIONS.length) {
+      this.setState({ currentIndex });
+    };
+  }
+
+  submit() {
+    return <Redirect to="/" />
   }
 
   render() {
     const question = QUESTIONS[this.state.currentIndex];
     const CardContent = Questions[question];
+    const isLastQuestion = this.state.currentIndex === (QUESTIONS.length - 1);
     return (
       <div>
-        <p style={{ color: 'white' }}>Questions</p>
         <QuestionCard>
           <CardContent
             name={question}
+            number={this.state.currentIndex + 1}
             onClick={(choice) => this.assignPreference(question, choice)}
             value={this.state[question]}
           />
+          {isLastQuestion
+             ? <div className="" disabled={!this.state[question]} onClick={this.submit}>Submit</div>
+             : <div className="next-question" disabled={!this.state[question]} onClick={this.nextQuestion}>Next question</div>}
         </QuestionCard>
-        <button onClick={this.nextQuestion}>Next question</button>
       </div>
     );
   }

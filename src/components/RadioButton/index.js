@@ -6,7 +6,7 @@ import RadioButtonUnchecked from 'material-ui-icons/RadioButtonUnchecked';
 
 
 export default function RadioButton(props) {
-  const { isChecked, onClick, dataTestId } = props;
+  const { isChecked, onClick } = props;
 
   return (
     <div className="radioInputStyle" onClick={onClick}>
@@ -24,5 +24,4 @@ RadioButton.defaultProps = {
 RadioButton.propTypes = {
   isChecked: PropTypes.bool.isRequired,
   onClick: PropTypes.func.isRequired,
-  dataTestId: PropTypes.string,
 };
