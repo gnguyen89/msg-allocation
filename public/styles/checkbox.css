@@ -12,3 +12,8 @@
 .checked {
   color: #aa1e23;
 }
+
+.disabled {
+  color: #e3e7ed;
+  cursor: default;
+}
