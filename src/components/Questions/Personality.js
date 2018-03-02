@@ -32,7 +32,7 @@ class Personality extends Component {
     return (
       <div>
         <Body bold style={{ color: '#aa1e23' }}>{questionNumber}</Body>
-        <Body bold className="question-title">WHICH LANGUAGE WOULD YOU PREFER YOUR TUTOR TO SPEAK?</Body>
+        <Body bold className="question-title">WHICH IS MORE IMPORTANT TO YOU?</Body>
         <div className="image"></div>
         <div className="choices">
           <div className="choice">
