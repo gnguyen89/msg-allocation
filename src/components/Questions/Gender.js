@@ -9,8 +9,8 @@ class Gender extends Component {
     return (
       <div>
         <Body bold style={{ color: '#aa1e23' }}>{questionNumber}</Body>
-        <Body bold style={{ fontSize: '26px' }}>DO YOU HAVE A PREFERENCE FOR A CERTAIN GENDER?</Body>
-        <div style={{ height: '300px', width: '100%', backgroundColor: '#4f6987', margin: '20px 0px' }}></div>
+        <Body bold className="question-title">DO YOU HAVE A PREFERENCE FOR A CERTAIN GENDER?</Body>
+        <div className="image"></div>
         <div className="choices">
           <div className="choice">
             <RadioButton
