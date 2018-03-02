@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
-import RadioButton from '../RadioButton';
-import Checkbox from '../Checkbox';
+import { BrowserRouter, Route } from 'react-router-dom';
 import './style.css';
+
+import LoginPage from '../LoginPage';
+import TestPage from '../TestPage';
 
 class App extends Component {
   constructor(props) {
@@ -12,10 +14,12 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <Checkbox isChecked onClick={() => {}} />
-        <RadioButton isChecked onClick={() => {}} option={{
-          optionLabel: 'Testing',
-        }}/>
+        <BrowserRouter>
+          <div>
+            <Route exact path="/" component={LoginPage} />
+            <Route path="/test" component={TestPage} />
+          </div>
+        </BrowserRouter>
       </div>
     );
   }
