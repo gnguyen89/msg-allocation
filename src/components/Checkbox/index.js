@@ -6,23 +6,26 @@ import CheckBox from 'material-ui-icons/CheckBox';
 
 
 export default function Checkbox(props) {
-  const { isChecked, onClick, dataTestId } = props;
+  const { isChecked, onClick, disabled } = props;
 
   return (
     <div className="checkboxInputStyle" onClick={onClick}>
       {isChecked
         ? <CheckBox className={classNames(["checkbox", "checked"])} />
-        : <CheckBoxOutlineBlank className={classNames(["checkbox", "unchecked"])} />}
+        : <CheckBoxOutlineBlank className={classNames(["checkbox", "unchecked", {
+          ['disabled']: disabled,
+        }])} />}
     </div>
   );
 }
 
 Checkbox.defaultProps = {
   isChecked: false,
+  disabled: false,
 };
 
 Checkbox.propTypes = {
+  disabled: PropTypes.bool,
   isChecked: PropTypes.bool.isRequired,
   onClick: PropTypes.func.isRequired,
-  dataTestId: PropTypes.string,
 };

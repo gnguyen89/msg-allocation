@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Redirect } from 'react-router';
+import { Redirect } from 'react-router-dom';
 
 class App extends Component {
   constructor(props) {
@@ -12,7 +12,7 @@ class App extends Component {
   }
 
   changeRoute() {
-    return <Redirect to="/test" />;
+    return <Redirect to="/questions" />;
   }
 
   verify() {
@@ -36,7 +36,7 @@ class App extends Component {
         <h3 className="contrast-text-2">Log in</h3>
         <p className="contrast-text" style={{ marginLeft: '-380px' }}>Email adress</p>
         <input type="text" className="input"/>
-        <p className="contrast-text" style={{ marginLeft: '-380px' }}>Password</p>
+        <p className="contrast-text" style={{ marginLeft: '-400px' }}>Password</p>
         <input type="password" className="input"/>
         {this.state.verify
            ? <div className="contrast-text-2 verify-button">Verifying...</div>

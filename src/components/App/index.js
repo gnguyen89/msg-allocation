@@ -3,7 +3,7 @@ import { BrowserRouter, Route } from 'react-router-dom';
 import './style.css';
 
 import LoginPage from '../LoginPage';
-import TestPage from '../TestPage';
+import QuestionPage from '../QuestionPage';
 
 class App extends Component {
   constructor(props) {
@@ -17,7 +17,7 @@ class App extends Component {
         <BrowserRouter>
           <div>
             <Route exact path="/" component={LoginPage} />
-            <Route path="/test" component={TestPage} />
+            <Route path="/questions" component={QuestionPage} />
           </div>
         </BrowserRouter>
       </div>
