@@ -4,6 +4,11 @@ import QuestionCard from '../QuestionCard';
 
 import Questions from '../Questions';
 
+function scrollToTop() {
+  document.body.scrollTop = 0; // For Safari
+  document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+}
+
 const QUESTIONS = [
   'Gender',
   'Location',
@@ -31,6 +36,7 @@ class TestPage extends Component {
     if (currentIndex < QUESTIONS.length) {
       this.setState({ currentIndex });
     };
+    scrollToTop();
   }
 
   submit() {
@@ -51,8 +57,8 @@ class TestPage extends Component {
             value={this.state[question]}
           />
           {isLastQuestion
-             ? <div className="" disabled={!this.state[question]} onClick={this.submit}>Submit</div>
-             : <div className="next-question" disabled={!this.state[question]} onClick={this.nextQuestion}>Next question</div>}
+             ? <div className="button" disabled={!this.state[question]} onClick={this.submit}>Submit</div>
+             : <div className="button" disabled={!this.state[question]} onClick={this.nextQuestion}>Next question</div>}
         </QuestionCard>
       </div>
     );
