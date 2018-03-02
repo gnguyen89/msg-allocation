@@ -1,12 +1,29 @@
 import React, { Component } from 'react';
+import { Redirect } from 'react-router';
 
 class App extends Component {
   constructor(props) {
     super(props);
-    this.state = {};
+    this.state = {
+      verify: false,
+      redirect: false,
+    };
+    this.verify = this.verify.bind(this);
+  }
+
+  changeRoute() {
+    return <Redirect to="/test" />;
+  }
+
+  verify() {
+    this.setState({ verify: true });
+    window.setTimeout(() => this.setState({ redirect: true }), 2000);
   }
 
   render() {
+    if (this.state.redirect) {
+      return this.changeRoute();
+    }
     return (
       <div>
         <div className="login-black-bar">
@@ -20,8 +37,10 @@ class App extends Component {
         <p className="contrast-text" style={{ marginLeft: '-380px' }}>Email adress</p>
         <input type="text" className="input"/>
         <p className="contrast-text" style={{ marginLeft: '-380px' }}>Password</p>
-        <input type="text" className="input"/>
-        <div className="contrast-text-2 login-button">Log in</div>
+        <input type="password" className="input"/>
+        {this.state.verify
+           ? <div className="contrast-text-2 verify-button">Verifying...</div>
+           : <div className="contrast-text-2 login-button" onClick={this.verify}>Log in</div>}
       </div>
     );
   }
