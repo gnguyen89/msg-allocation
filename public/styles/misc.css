@@ -1,15 +1,8 @@
-.question-card {
-  display: flex;
-  flex: 1;
-  flex-direction: column;
-  background-color: white;
-  padding: 32px 0px 0px;
-}
 
 .image {
-  height: 250px;
+  height: 220px;
   width: 100%;
-  background-color: #4f6987;
+  /* background-color: #4f6987; */
   margin: 20px 0px;
 }
 
@@ -30,17 +23,27 @@
 }
 
 .button {
-  background-color: #00a896;
+  /* background-color: #00a896; */
+  background: #9D2E2B;
+  font-family: 'Montserrat', sans-serif;
   color: #ffffff;
   height: 60px;
-  width: 100%;
+  width: 250px;
   display: flex;
   align-items: center;
   justify-content: center;
   margin-top: 20px;
+  border-radius: 30px;
+  align-self: center;
 }
 
 .question-title {
   font-size: 26px;
   margin: 0px 32px;
+}
+
+.back-chevron {
+  font-size: 1.5rem;
+  position: absolute;
+  cursor: pointer;
 }

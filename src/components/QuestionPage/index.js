@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import { Redirect } from 'react-router-dom';
+import './style.css';
+
 import QuestionCard from '../QuestionCard';
 
 import Questions from '../Questions';
@@ -24,6 +26,7 @@ class TestPage extends Component {
     };
     this.assignPreference = this.assignPreference.bind(this);
     this.nextQuestion = this.nextQuestion.bind(this);
+    this.prevQuestion = this.prevQuestion.bind(this);
   }
 
   assignPreference(question, choice) {
@@ -39,6 +42,15 @@ class TestPage extends Component {
     scrollToTop();
   }
 
+  prevQuestion() {
+    let { currentIndex } = this.state;
+    currentIndex--;
+    if (currentIndex > -1) {
+      this.setState({ currentIndex });
+    };
+    scrollToTop();
+  }
+
   submit() {
     return <Redirect to="/" />
   }
@@ -48,13 +60,14 @@ class TestPage extends Component {
     const CardContent = Questions[question];
     const isLastQuestion = this.state.currentIndex === (QUESTIONS.length - 1);
     return (
-      <div>
+      <div className="question-page">
         <QuestionCard>
           <CardContent
             name={question}
             number={this.state.currentIndex + 1}
             onClick={(choice) => this.assignPreference(question, choice)}
             value={this.state[question]}
+            goBack={this.prevQuestion}
           />
           {isLastQuestion
              ? <div className="button" disabled={!this.state[question]} onClick={this.submit}>Submit</div>

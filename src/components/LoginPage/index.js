@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { Redirect } from 'react-router-dom';
 
+import './style.css';
+
 class App extends Component {
   constructor(props) {
     super(props);
@@ -25,7 +27,7 @@ class App extends Component {
       return this.changeRoute();
     }
     return (
-      <div>
+      <div className="login-page">
         <div className="login-black-bar">
           <span className="contrast-text">CRIMSON EDUCATION</span>
         </div>
