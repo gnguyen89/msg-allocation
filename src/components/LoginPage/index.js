@@ -35,7 +35,7 @@ class App extends Component {
           <Body bold style={{ fontSize: '24px' }}>Let us find the best tutor for you!</Body>
           <img src="./images/grey-wave.png" style={{ marginTop: '1rem' }} width="100px"/>
           <br/>
-          <img src="./images/0_illustration.png" className="welcome-graphic" style={{ marginTop: '3.2rem' }}/>
+          <img src="./images/0_illustration.png" className="welcome-graphic" style={{ margin: '3.2rem 0' }}/>
           <br/>
           <input type="text" className="input"/><br/>
           <input type="password" className="input"/>
