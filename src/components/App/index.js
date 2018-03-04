@@ -4,6 +4,7 @@ import './style.css';
 
 import LoginPage from '../LoginPage';
 import QuestionPage from '../QuestionPage';
+import CompletePage from '../CompletePage';
 
 class App extends Component {
   constructor(props) {
@@ -18,6 +19,7 @@ class App extends Component {
           <div>
             <Route exact path="/" component={LoginPage} />
             <Route path="/questions" component={QuestionPage} />
+            <Route path="/complete" component={CompletePage} />
           </div>
         </BrowserRouter>
       </div>

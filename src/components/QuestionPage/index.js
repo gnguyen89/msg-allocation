@@ -17,17 +17,22 @@ const QUESTIONS = [
   'Language',
   'Personality',
   'StudyStyle',
+  'Hobby',
 ];
 
 class TestPage extends Component {
   constructor(props) {
     super(props);
+
     this.state = {
       currentIndex: 0,
+      isComplete: false,
     };
+
     this.assignPreference = this.assignPreference.bind(this);
     this.nextQuestion = this.nextQuestion.bind(this);
     this.prevQuestion = this.prevQuestion.bind(this);
+    this.submit = this.submit.bind(this);
   }
 
   assignPreference(question, choice) {
@@ -53,10 +58,19 @@ class TestPage extends Component {
   }
 
   submit() {
-    return <Redirect to="/" />
+    this.setState({
+      isComplete: true,
+    });
+  }
+
+  goToComplete() {
+    return <Redirect to="/complete" push />
   }
 
   render() {
+    if (this.state.isComplete) {
+      return this.goToComplete();
+    }
     const question = QUESTIONS[this.state.currentIndex];
     const CardContent = Questions[question];
     const isLastQuestion = this.state.currentIndex === (QUESTIONS.length - 1);

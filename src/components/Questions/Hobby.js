@@ -4,7 +4,7 @@ import Body from '../Body';
 import Container from './elements/Container';
 import languages from '../../resources/languages.json';
 
-class Language extends Component {
+class Hobby extends Component {
   constructor() {
     super();
 
@@ -22,7 +22,7 @@ class Language extends Component {
         <Body bold className="question-title">What your preferred language for communication?</Body>
         <Container>
           <div className="image">
-            <img src="./images/illustrations/3_illustration.png" width="350px" />
+            <img src="./images/illustrations/6_illustration.png" width="350px" />
           </div>
           {/* <div className="choices" style={{ marginBottom: '110px' }}>
             <select onChange={e => this.props.onClick(e.target.value)} value={this.props.value || 'none'}>
@@ -32,26 +32,10 @@ class Language extends Component {
               ))}
             </select>
           </div> */}
-          <ReactAutocomplete
-            items={languages}
-            shouldItemRender={(item, value) => item.language.toLowerCase().indexOf(value.toLowerCase()) > -1}
-            getItemValue={item => item.language}
-            renderItem={(item, highlighted) =>
-              <div
-                className="autocomplete-item"
-                style={{ background: highlighted ? '#F4F6F8' : 'white' }}
-                key={item.id}
-              >
-                {item.language}
-              </div>
-            }
-            value={this.state.value}
-            onChange={e => this.setState({ value: e.target.value })}
-            onSelect={value => this.setState({ value })}
-            inputProps={{
-              className: 'autocomplete language-auto',
-              placeholder: 'Languages',
-            }}
+          <textarea
+            className="text-area hobby-box"
+            placeholder="Your hobbies..."
+            multiple
           />
         </Container>
       </div>
@@ -59,4 +43,4 @@ class Language extends Component {
   }
 }
 
-export default Language;
+export default Hobby;

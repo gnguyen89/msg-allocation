@@ -3,6 +3,7 @@ import Location from './Location';
 import Personality from './Personality';
 import Language from './Language';
 import StudyStyle from './StudyStyle';
+import Hobby from './Hobby';
 
 import './style.css';
 
@@ -12,4 +13,5 @@ export default {
   Personality,
   Language,
   StudyStyle,
+  Hobby,
 };

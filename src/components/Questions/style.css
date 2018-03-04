@@ -59,3 +59,46 @@
   align-self: center;
   cursor: pointer;
 }
+
+
+.image {
+  margin-top: 1rem;
+  /* background-color: #4f6987; */
+}
+
+.text-area {
+  height: 60px;
+  background: #F4F6F8;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  border: 1px solid #E1E3E5;
+  padding: 10px;
+}
+
+.hobby-box {
+  margin: 20px 0 10px 0;
+}
+
+.autocomplete {
+  background: #F4F6F8;
+  padding: 10px;
+  margin-top: 10px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  border: 1px solid #E1E3E5;
+  width: 90%;
+  box-sizing: border-box;
+  border-radius: 2px;
+}
+.autocomplete-item {
+  background: white;
+  padding: 10px;
+  text-align: left;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  max-height: 100px;
+}
+
+.language-auto {
+  margin: 10px 0;
+}

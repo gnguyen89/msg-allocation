@@ -14,6 +14,9 @@ class Location extends Component {
         <Body bold className="question-number">{questionNumber}</Body>
         <Body bold className="question-title">Where do you prefer your tutor to be located?</Body>
         <Container>
+        <div className="image">
+          <img src="./images/illustrations/2_illustration.png" width="350px" />
+        </div>
         <div className="choices-2">
           <div className="choice-2">
             <BigCircle

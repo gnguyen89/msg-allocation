@@ -17,6 +17,9 @@ class StudyStyle extends Component {
           <img src="./images/student.png" height="220px" />
         </div> */}
         <Container>
+          <div className="image">
+            <img src="./images/illustrations/0_illustration.png" width="350px" />
+          </div>
           <div className="choices-2">
             <div className="choice-2">
               <BigCircle
