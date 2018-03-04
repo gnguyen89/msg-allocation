@@ -66,7 +66,7 @@
 
 
 .image {
-  margin-top: 1rem;
+  margin: 2rem 0;
   /* background-color: #4f6987; */
 }
 
@@ -80,7 +80,7 @@
 }
 
 .hobby-box {
-  margin: 20px 0 10px 0;
+  margin: 20px;
 }
 
 .autocomplete {
