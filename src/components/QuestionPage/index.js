@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Redirect } from 'react-router-dom';
 import './style.css';
+import { sendEmail } from '../../services/email';
 
 import QuestionCard from '../QuestionCard';
 
@@ -61,6 +62,7 @@ class TestPage extends Component {
     this.setState({
       isComplete: true,
     });
+    sendEmail();
   }
 
   goToComplete() {
