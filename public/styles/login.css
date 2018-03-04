@@ -36,31 +36,53 @@
 .input {
   height: 44px;
   width: 450px;
-  border-radius: 3px;
+  border-radius: 5px;
   border: none;
+  margin-top: 0.8rem;
+  padding: 1rem;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+  color: #232950;
+  font-weight: 600;
 }
 
 .login-button {
   background-color: #aa1e23;
-  border-radius: 3px;
-  width: 450px;
+  border-radius: 22px;
+  width: 220px;
   height: 44px;
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  margin: 30px auto;
+  margin: 24px auto;
+  letter-spacing: 3px;
+  font-size: 14px;
 }
 
 .verify-button {
   background-color: #babcc5;
-  border-radius: 3px;
-  width: 450px;
+  border-radius: 22px;
+  width: 220px;
   height: 44px;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 30px auto;
+  margin: 24px auto;
+}
+
+.login-input-text {
+  margin-left: -380px;
+}
+
+@media (max-width: 450px) {
+  .input {
+    width: 280px;
+  }
+
+  .login-input-text {
+    margin-left: 0px;
+  }
 }
 
 .login-input-text {

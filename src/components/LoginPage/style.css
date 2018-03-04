@@ -1,4 +1,28 @@
 .login-page {
-  background: #323456;
   height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  position: relative;
+}
+
+.welcome-graphic {
+  width: 180px;
+}
+
+.diag-welcome {
+  transform: rotate(-20deg);
+  background-color: #323456;
+  width: 200vw;
+  height: 900px;
+  position: absolute;
+  bottom: -150px;
+  left: -250px;
+  z-index: -1000;
+}
+
+@media (max-width: 480px) {
+  .diag-welcome {
+    bottom: -180px;
+    height: 600px
+  }
 }
