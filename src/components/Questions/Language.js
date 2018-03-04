@@ -21,9 +21,6 @@ class Language extends Component {
         <Body bold className="question-number">{questionNumber}</Body>
         <Body bold className="question-title">What your preferred language for communication?</Body>
         <Container>
-          <div className="image">
-            <img src="./images/illustrations/3_illustration.png" width="350px" />
-          </div>
           {/* <div className="choices" style={{ marginBottom: '110px' }}>
             <select onChange={e => this.props.onClick(e.target.value)} value={this.props.value || 'none'}>
               <option value="none" disabled hidden>Choose language</option>
@@ -53,6 +50,9 @@ class Language extends Component {
               placeholder: 'Languages',
             }}
           />
+          <div className="image" style={{ margin: '30px 0' }}>
+            <img src="./images/illustrations/3_illustration.png" width="300px" />
+          </div>
         </Container>
       </div>
     );

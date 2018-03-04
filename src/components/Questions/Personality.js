@@ -37,7 +37,7 @@ class Personality extends Component {
         <Body bold className="question-title">Which is more important for you?</Body>
         <Container>
           <div className="image">
-            <img src="./images/illustrations/4_illustration.png" width="350px" />
+            <img src="./images/illustrations/4_illustration.png" width="300px" />
           </div>
           <div className="choices">
             <div className="choice">

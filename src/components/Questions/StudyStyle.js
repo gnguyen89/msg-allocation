@@ -18,7 +18,7 @@ class StudyStyle extends Component {
         </div> */}
         <Container>
           <div className="image">
-            <img src="./images/illustrations/0_illustration.png" width="350px" />
+            <img src="./images/illustrations/Hackerton-08.png" width="300px" />
           </div>
           <div className="choices-2">
             <div className="choice-2">
