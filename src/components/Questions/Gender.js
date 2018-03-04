@@ -13,9 +13,10 @@ class Gender extends Component {
         {this.props.number > 1 && <div className="back-chevron" onClick={this.props.goBack}>&#8592;</div>}
         <Body bold className="question-number">{questionNumber}</Body>
         <Body bold className="question-title">Do you have a preference for a certain gender?</Body>
+        <img src="./images/wave.png" style={{ marginTop: '1rem' }} width="100px"/>
         <Container>
           <div className="image">
-            <img src="./images/illustrations/1_illustration.png" width="350px" />
+            <img className="graphic" src="./images/illustrations/1_illustration.png"/>
           </div>
           <div className="choices-2">
             <div className="choice-2">

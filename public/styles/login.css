@@ -13,6 +13,7 @@
   font-family: Lato, sans-serif;
   margin-left: 18px;
 }
+
 .contrast-text-2 {
   color: white;
   font-size: 16px;
@@ -29,6 +30,7 @@
   flex-direction: row;
   align-items: center;
   padding-left: 18px;
+  box-sizing: border-box;
 }
 
 .input {
@@ -59,4 +61,26 @@
   align-items: center;
   justify-content: center;
   margin: 30px auto;
+}
+
+.login-input-text {
+  margin-left: -380px;
+}
+
+@media (max-width: 450px) {
+  .login-button {
+    max-width: 300px;
+  }
+
+  .verify-button {
+    max-width: 300px;
+  }
+
+  .input {
+    max-width: 300px;
+  }
+
+  .login-input-text {
+    margin-left: 0px;
+  }
 }

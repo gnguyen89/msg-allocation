@@ -1,0 +1,32 @@
+
+.complete-page {
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+}
+
+.complete-text {
+  margin: 8rem 3rem;
+  z-index: 1000;
+}
+
+.thank-you-text {
+  font-size: 1.6rem;
+  font-weight: 700;
+}
+
+.thank-you-graphic {
+  width: 200px;
+  z-index: 1000;
+}
+
+.diagonal {
+  transform: rotate(-20deg);
+  background-color: #323456;
+  width: 200vw;
+  height: 400px;
+  position: absolute;
+  bottom: -80px;
+  left: -250px;
+  z-index: -1000;
+}

@@ -19,7 +19,8 @@ class Hobby extends Component {
       <div>
         {this.props.number > 1 && <div className="back-chevron" onClick={this.props.goBack}>&#8592;</div>}
         <Body bold className="question-number">{questionNumber}</Body>
-        <Body bold className="question-title">What your preferred language for communication?</Body>
+        <Body bold className="question-title">What are your hobbies?</Body>
+        <img src="./images/wave.png" style={{ marginTop: '1rem' }} width="100px"/>
         <Container>
           <textarea
             className="text-area hobby-box"
