@@ -84,3 +84,25 @@
     margin-left: 0px;
   }
 }
+
+.login-input-text {
+  margin-left: -380px;
+}
+
+@media (max-width: 450px) {
+  .login-button {
+    max-width: 300px;
+  }
+
+  .verify-button {
+    max-width: 300px;
+  }
+
+  .input {
+    max-width: 300px;
+  }
+
+  .login-input-text {
+    margin-left: 0px;
+  }
+}
