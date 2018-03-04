@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { Redirect } from 'react-router-dom';
 
+import Body from '../Body';
+
 import './style.css';
 
 class App extends Component {
@@ -28,21 +30,21 @@ class App extends Component {
     }
     return (
       <div className="login-page">
-        <div className="login-black-bar">
-          <span className="contrast-text">CRIMSON EDUCATION</span>
+        <div style={{ flex: 1, margin: '6rem 2rem' }}>
+          <Body bold style={{ color: '#aa1e23' }}>Crimson Education</Body>
+          <Body bold style={{ fontSize: '24px' }}>Let us find the best tutor for you!</Body>
+          <img src="./images/grey-wave.png" style={{ marginTop: '1rem' }} width="100px"/>
+          <br/>
+          <img src="./images/0_illustration.png" className="welcome-graphic" style={{ marginTop: '3.2rem' }}/>
+          <br/>
+          <input type="text" className="input"/><br/>
+          <input type="password" className="input"/>
+          {this.state.verify
+             ? <div className="contrast-text-2 verify-button">Verifying...</div>
+             : <div className="contrast-text-2 login-button" onClick={this.verify}>START</div>}
+          <p style={{ color: 'white', fontSize: '10px', fontWeight: 400, letterSpacing: '1px' }}>Forgot your password?</p>
         </div>
-        <div className="login-white-bar">
-          <img src="./images/Crimson_Logo.png" height="55px" width="140px" />
-        </div>
-
-        <h3 className="contrast-text-2">Log in</h3>
-        <p className="contrast-text login-input-text">Email adress</p>
-        <input type="text" className="input"/>
-        <p className="contrast-text login-input-text">Password</p>
-        <input type="password" className="input"/>
-        {this.state.verify
-           ? <div className="contrast-text-2 verify-button">Verifying...</div>
-           : <div className="contrast-text-2 login-button" onClick={this.verify}>Log in</div>}
+        <div className="diag-welcome" />
       </div>
     );
   }
