@@ -30,3 +30,10 @@
   left: -250px;
   z-index: -1000;
 }
+
+@media (min-width: 480px) {
+  .diagonal {
+    height: 900px;
+    bottom: -250px;
+  }
+}
