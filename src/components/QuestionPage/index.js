@@ -16,6 +16,7 @@ const QUESTIONS = [
   'Location',
   'Language',
   'Personality',
+  'StudyStyle',
 ];
 
 class TestPage extends Component {

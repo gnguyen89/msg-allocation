@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 
 import Body from '../Body';
 import RadioButton from '../RadioButton';
+import BigCircle from '../BigCircle';
+import Container from './elements/Container';
 
 class Location extends Component {
   render() {
@@ -9,32 +11,42 @@ class Location extends Component {
     return (
       <div>
         {this.props.number > 1 && <div className="back-chevron" onClick={this.props.goBack}>&#8592;</div>}
-        <Body bold style={{ color: '#aa1e23' }}>{questionNumber}</Body>
-        <Body bold className="question-title">WHERE WOULD YOU LIKE YOUR TUTOR TO BE LOCATED?</Body>
-        <div className="image"></div>
-        <div className="choices">
-          <div className="choice">
-            <RadioButton
-              isChecked={this.props.value === 'same-city'}
-              onClick={() => this.props.onClick('same-city')}
+        <Body bold className="question-number">{questionNumber}</Body>
+        <Body bold className="question-title">Where do you prefer your tutor to be located?</Body>
+        <Container>
+        <div className="choices-2">
+          <div className="choice-2">
+            <BigCircle
+              img="./images/icons/default/2_Same city.png"
+              selected="./images/icons/selected/2_Same city.png"
             />
-            <Body>Same city</Body>
+            <Body className="choice-subtitle">Same city</Body>
           </div>
-          <div className="choice">
-            <RadioButton
-              isChecked={this.props.value === 'same-timezone'}
-              onClick={() => this.props.onClick('same-timezone')}
+          <div className="choice-2">
+            <BigCircle
+              img="./images/icons/default/2_Same country.png"
+              selected="./images/icons/selected/2_Same country.png"
             />
-            <Body>Same timezone</Body>
-          </div>
-          <div className="choice">
-            <RadioButton
-              isChecked={this.props.value === 'none'}
-              onClick={() => this.props.onClick('none')}
-            />
-            <Body>Doesn't matter</Body>
+            <Body className="choice-subtitle">Same country</Body>
           </div>
         </div>
+        <div className="choices-2">
+          <div className="choice-2">
+            <BigCircle
+              img="./images/icons/default/2_Same timzone.png"
+              selected="./images/icons/selected/2_Same timzone.png"
+            />
+            <Body className="choice-subtitle">Same timezone</Body>
+          </div>
+          <div className="choice-2">
+            <BigCircle
+              img="./images/icons/default/4_Doesn't matter.png"
+              selected="./images/icons/selected/4_Doesn't matter.png"
+            />
+            <Body className="choice-subtitle">Don't mind</Body>
+          </div>
+        </div>
+      </Container>
       </div>
     );
   }

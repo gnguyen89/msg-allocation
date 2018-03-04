@@ -21,29 +21,3 @@
   align-items: center;
   margin: 0px;
 }
-
-.button {
-  /* background-color: #00a896; */
-  background: #9D2E2B;
-  font-family: 'Montserrat', sans-serif;
-  color: #ffffff;
-  height: 60px;
-  width: 250px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-top: 20px;
-  border-radius: 30px;
-  align-self: center;
-}
-
-.question-title {
-  font-size: 26px;
-  margin: 0px 32px;
-}
-
-.back-chevron {
-  font-size: 1.5rem;
-  position: absolute;
-  cursor: pointer;
-}

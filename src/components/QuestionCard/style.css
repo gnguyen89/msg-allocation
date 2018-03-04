@@ -2,13 +2,12 @@
   display: flex;
   flex: 1;
   flex-direction: column;
-  background-color: white;
+  /* background-color: white; */
   padding: 32px 0px 0px;
   box-sizing: border-box;
-  width: 50rem;
   padding: 1rem;
   margin: 3rem 1rem;
-  max-width: 40rem;
-  min-width: 40rem;
+  max-width: 30rem;
+  min-width: 30rem;
   border-radius: 3px;
 }
