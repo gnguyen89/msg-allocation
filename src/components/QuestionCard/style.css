@@ -7,7 +7,7 @@
   padding: 1rem 0;
 }
 
-@media (min-width: 450px) {
+@media (min-width: 480px) {
   .question-card {
     max-width: 30rem;
     min-width: 30rem;

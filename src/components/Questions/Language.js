@@ -20,6 +20,7 @@ class Language extends Component {
         {this.props.number > 1 && <div className="back-chevron" onClick={this.props.goBack}>&#8592;</div>}
         <Body bold className="question-number">{questionNumber}</Body>
         <Body bold className="question-title">What your preferred language for communication?</Body>
+        <img src="./images/wave.png" style={{ marginTop: '1rem' }} width="100px"/>
         <Container>
           {/* <div className="choices" style={{ marginBottom: '110px' }}>
             <select onChange={e => this.props.onClick(e.target.value)} value={this.props.value || 'none'}>

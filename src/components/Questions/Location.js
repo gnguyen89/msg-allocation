@@ -13,6 +13,7 @@ class Location extends Component {
         {this.props.number > 1 && <div className="back-chevron" onClick={this.props.goBack}>&#8592;</div>}
         <Body bold className="question-number">{questionNumber}</Body>
         <Body bold className="question-title">Where do you prefer your tutor to be located?</Body>
+        <img src="./images/wave.png" style={{ marginTop: '1rem' }} width="100px"/>
         <Container>
         <div className="image">
           <img src="./images/illustrations/2_illustration.png" width="300px" />
